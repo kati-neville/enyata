@@ -1,12 +1,6 @@
 import "./progress-bar.css";
 
-export const ProgressBar = ({
-  base,
-  effort,
-}: {
-  base: number;
-  effort: number;
-}) => {
+export const ProgressBar = ({ base }: { base: number }) => {
   const percentageCompleted = (base / 100) * 100;
 
   return (
