@@ -1,0 +1,22 @@
+@import url("../../theme.css");
+
+.progress_bar_container {
+  display: flex;
+  align-items: center;
+}
+
+.progress_bar_container span {
+  margin-left: 20px;
+  width: 40px;
+}
+
+.progress_bar_outer_bar {
+  flex: 1;
+  height: 0.5rem;
+  background-color: var(--neutral-600);
+}
+.progress_bar_inner_bar {
+  height: 100%;
+  width: 10%;
+  background-color: var(--color-theme);
+}

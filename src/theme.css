@@ -1,0 +1,186 @@
+@font-face {
+	font-family: "ClashDisplay";
+	src: url("./assets/fonts/clashdisplay/bold.otf");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "ClashDisplay";
+	src: url("./assets/fonts/clashdisplay/semibold.otf");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "ClashDisplay";
+	src: url("./assets/fonts/clashdisplay/medium.otf");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "ClashDisplay";
+	src: url("./assets/fonts/clashdisplay/regular.otf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "ClashDisplay";
+	src: url("./assets/fonts/clashdisplay/light.otf");
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "ClashDisplay";
+	src: url("./assets/fonts/clashdisplay/extralight.otf");
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: "GeneralSans";
+	src: url("./assets/fonts/generalSans/light.otf");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "GeneralSans";
+	src: url("./assets/fonts/generalSans/regular.otf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "GeneralSans";
+	src: url("./assets/fonts/generalSans/medium.otf");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "GeneralSans";
+	src: url("./assets/fonts/generalSans/semibold.otf");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: "GeneralSans";
+	src: url("./assets/fonts/generalSans/bold.otf");
+	font-weight: 700;
+}
+
+:root {
+	--color-theme-pink: #e85382;
+	--color-theme-blue: #39badf;
+	--color-theme-yellow: #e1a725;
+	/* FONT-FAMILIES */
+	--GeneralSans: GeneralSans, sans-serif;
+	--ClashDisplay: ClashDisplay, sans-serif;
+
+	--dark-200: #000000;
+	--dark-100: #0d131a;
+
+	--neutral-650: #272727;
+	--neutral-600: #cbcbcb;
+	--neutral-550: #e9e9e9;
+	--neutral-500: #d9d9d9;
+	--neutral-450: #7b7b7b;
+	--neutral-400: #f6f6f6;
+	--neutral-350: #ebebeb;
+	--neutral-300: #fcfcfc;
+	--neutral-250: #eeeeee;
+	--neutral-200: #e1e1e1;
+	--neutral-150: #f3f3f3;
+	--neutral-100: #f2f2f2;
+	--neutral-50: #f1f1f1;
+}
+
+/* THEME COLOR VARIANTS */
+
+html[data-theme="pink"] {
+	--color-theme: var(--color-theme-pink);
+}
+
+html[data-theme="blue"] {
+	--color-theme: var(--color-theme-blue);
+}
+
+html[data-theme="yellow"] {
+	--color-theme: var(--color-theme-yellow);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--neutral-300);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--neutral-150);
+		border-radius: 5px;
+	}
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	cursor: pointer;
+}
+ul {
+	list-style-position: inside;
+	padding: 0;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+
+main {
+	transition: all 0.2s ease-in;
+}
+
+.spinner_container {
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}

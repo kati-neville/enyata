@@ -1,0 +1,48 @@
+@import url("../../theme.css");
+.spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 25%;
+  height: 100%;
+  width: 100%;
+}
+
+.spinner_sm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 12.5%;
+  height: 100%;
+  width: 100%;
+}
+.spinner_circle {
+  box-sizing: border-box;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  border: 10px solid var(--neutral-500);
+  border-top-color: var(--color-theme);
+  animation: spin 1s infinite linear;
+}
+.spinner_circle_sm {
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: 4px solid var(--neutral-500);
+  border-top-color: var(--color-theme);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

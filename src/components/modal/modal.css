@@ -1,0 +1,62 @@
+@import url("../../theme.css");
+
+.modal_container {
+  z-index: 1000;
+}
+
+.center_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opening {
+  animation: fadeIn 0.5s linear;
+}
+.closing {
+  animation: fadeOut 2s linear;
+}
+.side_modal {
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  animation: slideInRight 0.25s ease-out;
+}
+.modal_overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  background: hsla(0, 0%, 15%, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

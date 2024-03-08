@@ -1,0 +1,127 @@
+@import url("../../theme.css");
+
+.paginator_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--ClashDisplay);
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.paginator_box_container {
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+}
+.paginator_box {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginator_active {
+  background-color: var(--color-theme);
+  color: white;
+}
+
+.paginator_inactive {
+  background-color: var(--neutral-200);
+}
+.caret_container {
+  background-color: var(--neutral-200);
+}
+.caret {
+  width: 8px;
+}
+
+.paginator_box .left_caret {
+  transform: rotate(180deg);
+}
+
+.paginator_limit_box {
+  background-color: var(--neutral-200);
+  border-radius: 8px;
+  padding: 4px 8px 4px 4px;
+  width: 5.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.paginator_limit_box span {
+  width: 2.5rem;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginator_limit_container {
+  position: relative;
+  width: 6.3rem;
+}
+.paginator_limit_dropdown_container {
+  list-style: none;
+  padding: unset;
+  margin: unset;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  margin-top: 2px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 4px;
+}
+.paginator_nav_container {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 12px;
+  cursor: pointer;
+}
+.paginator_limit_dropdown_item {
+  transition: all linear 0.3s;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+li:hover {
+  background-color: var(--neutral-150);
+}
+
+@media only screen and (max-width: 640px) {
+  .paginator_box {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 6px;
+  }
+  .paginator_nav_container {
+    gap: 4px;
+  }
+  .paginator_container {
+    font-size: 0.8rem;
+  }
+
+  .paginator_limit_box span {
+    width: 1.5rem;
+    height: 1rem;
+  }
+
+  .paginator_limit_box {
+    border-radius: 6px;
+    width: 3.5rem;
+  }
+}

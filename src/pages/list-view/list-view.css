@@ -1,0 +1,85 @@
+@import url("../../theme.css");
+
+.list_view_container {
+  height: 100vh;
+  background-image: url("../../assets/images/background.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.item_display {
+  width: 100%;
+  overflow: auto;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex: 1;
+}
+
+.pokemon_card_display_container {
+  width: 80%;
+  column-gap: 1rem;
+  position: relative;
+  margin: auto;
+  display: grid;
+  row-gap: 5rem;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.list_view_pagination_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  height: 9rem;
+}
+
+.no_data_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ClashDisplay);
+  text-align: center;
+}
+.no_data_container h1 {
+  font-size: 3rem;
+}
+.no_data_container p {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .pokemon_card_display_container {
+    width: 100%;
+    row-gap: 10rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list_view_pagination_container {
+    padding-top: 1rem;
+    height: 7rem;
+  }
+
+  .item_display {
+    flex: 1;
+    overflow: auto;
+    padding: 8rem 2rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pokemon_card_display_container {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item_display {
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    padding: 8rem 2rem 1.5rem;
+  }
+}

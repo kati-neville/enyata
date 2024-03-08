@@ -1,0 +1,65 @@
+@import url("../../theme.css");
+
+.nav_bar_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2.4rem;
+	box-shadow: 0px 14px 24px hsla(0, 0%, 0%, 0.05);
+}
+.navbar_input_container {
+	width: 40%;
+	position: static;
+}
+.logo_container {
+	display: flex;
+	align-items: center;
+	z-index: 99;
+}
+
+.logo_image {
+	max-width: 8rem;
+	position: absolute;
+	top: 5px;
+}
+
+.navbar_logo_title {
+	font-family: var(--ClashDisplay);
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin-left: 8.5rem;
+}
+
+.navbar_logo_title span {
+	color: var(--color-theme);
+}
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 1024px) {
+	.nav_bar_container {
+		max-width: 100%;
+		padding: 0.75rem 1.2rem;
+		position: relative;
+		height: 4rem;
+	}
+	.navbar_input_container {
+		padding: 0.75rem 1.2rem;
+		width: 100%;
+		position: absolute;
+		bottom: -4rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: 999;
+	}
+	.logo_image {
+		max-width: 5rem;
+	}
+	.navbar_logo_title {
+		font-family: var(--ClashDisplay);
+		font-weight: 600;
+		font-size: 1.2rem;
+		margin-left: 5.5rem;
+	}
+}
