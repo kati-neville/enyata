@@ -4,9 +4,10 @@ import caretDown from "@assets/svgs/caret-down.svg";
 import { useState } from "react";
 import { useNavigateParams } from "@/utils/hooks/use-navigate";
 import { useSearchParams } from "react-router-dom";
-import { LIMIT, PAGE } from "@/utils/constants";
+import { LIMIT, PAGE, SEARCH } from "@/utils/constants";
 import { Pagination } from "react-headless-pagination";
 import { handleGetPersistedPokemons } from "@/utils";
+import { useFilterData } from "@/utils/hooks/use-filter-data";
 
 interface PaginatorProps {}
 
@@ -17,11 +18,17 @@ export const Paginator: React.FC<PaginatorProps> = () => {
   const [searchParams] = useSearchParams();
   const [showLimitOptions, setShowLimitoptions] = useState(false);
   const displayLimit = searchParams.get(LIMIT) || limits[0].toString();
+  const searchItem = searchParams.get(SEARCH) || "";
 
   // The -1 is a trick as per the react-headless-pagination package implementation
   const page = parseFloat(searchParams.get(PAGE) || "0") - 1;
   const data = handleGetPersistedPokemons();
-  const totalPages = Math.ceil(data?.length / parseFloat(displayLimit));
+
+  const { filteredData } = useFilterData(searchItem, data);
+
+  const totalPages = Math.ceil(
+    (searchItem ? filteredData : data)?.length / parseFloat(displayLimit),
+  );
 
   const allParams: { [key: string]: string } = {};
   searchParams.forEach((value, key) => {
