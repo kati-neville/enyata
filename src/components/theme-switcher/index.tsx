@@ -32,8 +32,6 @@ export enum Themes {
 export const ThemeSwitcher = () => {
   const [open, setOpen] = useState(false);
 
-  console.log(localStorage.getItem(THEME));
-
   return (
     <>
       <ButtonSwitcher onClick={() => setOpen(true)} active />

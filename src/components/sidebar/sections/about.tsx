@@ -18,7 +18,7 @@ export function AboutTabDetails({ height, weight, abilities }: AboutTabProps) {
         <tr>
           <td>Abilities</td>
           <td>
-            <ul>
+            <ul className="abilities_list">
               {abilities?.map(({ ability }, index) => {
                 return (
                   <li key={index}>

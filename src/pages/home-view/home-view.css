@@ -59,6 +59,10 @@
     max-width: 100%;
   }
 
+  .home_view_pokemon_group {
+    max-width: 16rem;
+  }
+
   .home_view_form_input_container {
     width: 100%;
   }

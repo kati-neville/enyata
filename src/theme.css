@@ -175,7 +175,7 @@ ul {
 }
 
 main {
-  transition: all 0.2s ease-in;
+  color: var(--neutral-650);
 }
 
 .spinner_container {

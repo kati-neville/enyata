@@ -7,13 +7,16 @@ export const ProgressBar = ({
   base: number;
   effort: number;
 }) => {
-  const percentageCompleted = (effort / base) * 100;
+  const percentageCompleted = (base / 100) * 100;
+
   return (
     <div className="progress_bar_container">
       <div className="progress_bar_outer_bar">
         <div
           className="progress_bar_inner_bar"
-          style={{ width: percentageCompleted + 1 }}
+          style={{
+            width: percentageCompleted > 100 ? 100 : percentageCompleted,
+          }}
         ></div>
       </div>
 

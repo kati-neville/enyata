@@ -10,7 +10,6 @@
   padding: 10px 10px 20px;
   position: relative;
   box-shadow: 0px 4px 40px hsla(0, 0%, 0%, 0.06);
-  transition: 1s;
 }
 
 .pokemon_card_image_container {
@@ -138,7 +137,7 @@
   }
   .similar_pokemon_card_container {
     min-width: 9rem;
-    min-height: 10.5rem;
+    min-height: 9rem;
   }
 
   .similar_pokemon_card_name {

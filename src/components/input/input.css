@@ -71,4 +71,7 @@
   .input_container {
     background-color: var(--neutral-300);
   }
+  .outlined-bold {
+    border: 3px solid var(--color-theme);
+  }
 }

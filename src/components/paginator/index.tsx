@@ -49,7 +49,7 @@ export const Paginator: React.FC<PaginatorProps> = () => {
         currentPage={page}
         className="paginator_box_container"
         truncableText="..."
-        edgePageCount={2}
+        edgePageCount={1}
         // The +1 is a trick as per the react-headless-pagination package implementation
         setCurrentPage={(page) => handleSetPageUrlParam(page + 1)}
         middlePagesSiblingCount={0}
@@ -88,6 +88,7 @@ export const Paginator: React.FC<PaginatorProps> = () => {
           className="paginator_limit_box"
         >
           <span>{displayLimit}</span>
+
           <img src={caretDown} alt="paginator limit caret" />
         </button>
 

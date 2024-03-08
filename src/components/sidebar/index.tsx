@@ -8,7 +8,11 @@ import { Badge } from "../badge";
 import { PokemonData } from "../pokemon-card";
 import { Modal } from "../modal";
 import { useEffect, useState } from "react";
-import { fetchPokemonCardData, getDominantColor } from "@/utils";
+import {
+  fetchPokemonCardData,
+  getDominantColor,
+  resolveTypeIcon,
+} from "@/utils";
 import { AboutTabDetails } from "./sections/about";
 import { StatsTabDetails } from "./sections/stats";
 import { SimilarTabDetails } from "./sections/similar";
@@ -84,7 +88,7 @@ export const SideBar = () => {
               {pokemonData.types?.map(({ type }, index) => {
                 return (
                   <Badge key={index}>
-                    🔥 <span>{type.name}</span>
+                    {resolveTypeIcon(type.name)} <span>{type.name}</span>
                   </Badge>
                 );
               })}

@@ -23,7 +23,7 @@
   position: relative;
   margin: auto;
   display: grid;
-  row-gap: 5rem;
+  row-gap: 1rem;
   height: 100%;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -54,7 +54,7 @@
 @media only screen and (max-width: 1024px) {
   .pokemon_card_display_container {
     width: 100%;
-    row-gap: 10rem;
+    row-gap: 7rem;
     grid-template-columns: repeat(2, 1fr);
   }
 

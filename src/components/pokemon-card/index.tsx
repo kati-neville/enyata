@@ -86,16 +86,16 @@ export const PokemonCard = ({ pokemon }: { pokemon: PokemonValues }) => {
             </div>
           </div>
 
-          <div className="pokemon_card_view_container">
-            <button
-              onClick={() => navigateHandler()}
-              className="pokemon_card_view"
-            >
+          <button
+            onClick={() => navigateHandler()}
+            className="pokemon_card_view_container"
+          >
+            <div className="pokemon_card_view">
               <span>View pokemon</span>
 
               <img src={view} alt="view icon" />
-            </button>
-          </div>
+            </div>
+          </button>
         </>
       )}
     </div>
