@@ -7,11 +7,7 @@ import { TAB_VALUES } from "../sidebar/tabs";
 import { useInView } from "react-intersection-observer";
 import { PokemonValues } from "@/utils/types";
 import { useEffect, useState } from "react";
-import {
-  fetchPokemonCardData,
-  fetchPokemonCardTypes,
-  resolveTypeIcon,
-} from "@/utils";
+import { fetchPokemonCardData, resolveTypeIcon } from "@/utils";
 import { SpinnerSm } from "../spinner";
 import { useSearchParams } from "react-router-dom";
 

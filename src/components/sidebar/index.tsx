@@ -2,7 +2,7 @@ import "./sidebar.css";
 import { TAB_VALUES, Tabs } from "./tabs";
 import leftArrow from "@assets/svgs/arrow-left.svg";
 import { TabDataWrapper } from "./tab-data-wrapper";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { ID, TAB } from "@/utils/constants";
 import { Badge } from "../badge";
 import { PokemonData } from "../pokemon-card";
@@ -13,7 +13,6 @@ import { AboutTabDetails } from "./sections/about";
 import { StatsTabDetails } from "./sections/stats";
 import { SimilarTabDetails } from "./sections/similar";
 import { SpinnerSm } from "../spinner";
-import { useNavigateParams } from "@/utils/hooks/use-navigate";
 
 export const SideBar = () => {
   const [rgb, setRgb] = useState([]);
