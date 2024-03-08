@@ -1,65 +1,65 @@
 @import url("../../theme.css");
 
 .home_view_container {
-	height: 100vh;
-	width: 100vw;
-	background-color: var(--neutral-150);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--dark-200);
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--neutral-150);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-200);
 }
 
 .home_view_form_container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .home_view_pokemon_group {
-	max-width: 24rem;
+  max-width: 24rem;
 }
 .home_view_title {
-	font-family: var(--ClashDisplay);
-	font-weight: 600;
-	font-size: 3rem;
-	text-align: center;
+  font-family: var(--ClashDisplay);
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
 }
 .home_view_title span {
-	color: var(--color-theme);
+  color: var(--color-theme);
 }
 
 .home_view_description {
-	font-family: var(--GeneralSans);
-	font-weight: 400;
-	font-size: 1.13rem;
-	max-width: 55%;
-	text-align: center;
+  font-family: var(--GeneralSans);
+  font-weight: 400;
+  font-size: 1.13rem;
+  max-width: 55%;
+  text-align: center;
 }
 
 .home_view_form_input_container {
-	width: 70%;
+  width: 70%;
 }
 
 .home_view_form_link {
-	font-family: var(--GeneralSans);
-	font-weight: 500;
-	color: var(--dark-100);
-	font-size: 1.13rem;
-	margin-top: 1rem;
-	cursor: pointer;
+  font-family: var(--GeneralSans);
+  font-weight: 500;
+  color: var(--dark-100);
+  font-size: 1.13rem;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 /* MOBILE VIEW */
 
 @media only screen and (max-width: 640px) {
-	.home_view_description {
-		max-width: 100%;
-	}
+  .home_view_description {
+    max-width: 100%;
+  }
 
-	.home_view_form_input_container {
-		width: 100%;
-	}
+  .home_view_form_input_container {
+    width: 100%;
+  }
 }
