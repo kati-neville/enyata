@@ -38,17 +38,25 @@ export function getDominantColor(imageUrl: string, callback: Function) {
   }
 }
 
+export async function fetchPokemons() {
+  const response = await fetch(`${BASE_URL}/pokemon?limit=500`, {
+    method: "GET",
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+
+    handlePersistPokemons(data?.results);
+  } else {
+    throw new Error("Unable to fetch data, please try again later");
+  }
+}
+
 export async function fetchPokemonCardData(name: string) {
   const response = await fetch(`${BASE_URL}/pokemon/${name}`, {
     method: "GET",
   });
-  if (response.ok) {
-    const data = await response.json();
-
-    return data;
-  } else {
-    throw new Error("Failed, to fetch data");
-  }
+  return response;
 }
 
 export function resolveTypeIcon(type: string) {

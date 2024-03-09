@@ -5,26 +5,24 @@ import { TabDataWrapper } from "./tab-data-wrapper";
 import { useSearchParams } from "react-router-dom";
 import { ID, TAB } from "@/utils/constants";
 import { Badge } from "../badge";
-import { PokemonData } from "../pokemon-card";
 import { Modal } from "../modal";
 import { useEffect, useState } from "react";
-import {
-  fetchPokemonCardData,
-  getDominantColor,
-  resolveTypeIcon,
-} from "@/utils";
+import { getDominantColor, resolveTypeIcon } from "@/utils";
 import { AboutTabDetails } from "./sections/about";
 import { StatsTabDetails } from "./sections/stats";
 import { SimilarTabDetails } from "./sections/similar";
 import { SpinnerSm } from "../spinner";
+import { useGetPokemonDetails } from "@/utils/hooks/use-get-pokemon-details";
 
 export const SideBar = () => {
   const [rgb, setRgb] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const activeTab = searchParams.get(TAB) as TAB_VALUES;
   const queryId = searchParams.get(ID);
-  const [loading, setLoading] = useState(false);
-  const [pokemonData, setPokemonData] = useState<PokemonData>();
+  const { data: pokemonData, isLoading } = useGetPokemonDetails(
+    queryId || "",
+    true,
+  );
 
   const navigateHandler = () => {
     setSearchParams((params) => {
@@ -32,17 +30,6 @@ export const SideBar = () => {
       return params;
     });
   };
-
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      const data = await fetchPokemonCardData(queryId || "");
-      setPokemonData(data);
-      setLoading(false);
-    }
-
-    fetchData();
-  }, [queryId]);
 
   useEffect(() => {
     getDominantColor(pokemonData?.sprites?.front_default!, setRgb);
@@ -55,7 +42,7 @@ export const SideBar = () => {
       variant="side"
       className="sidebar_container"
     >
-      {loading || !pokemonData ? (
+      {isLoading || !pokemonData ? (
         <SpinnerSm />
       ) : (
         <>

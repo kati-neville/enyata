@@ -23,6 +23,18 @@
   text-decoration: underline;
 }
 
+.error_text_container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error_text_container p {
+  text-align: center;
+  font-family: var(--GeneralSans);
+  font-size: 1rem;
+}
 @media only screen and (max-width: 640px) {
   .error_title {
     font-size: 1.5rem;
