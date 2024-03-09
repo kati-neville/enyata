@@ -87,7 +87,7 @@ export const PokemonCard = ({ pokemon }: { pokemon: PokemonValues }) => {
           </div>
 
           <button
-            onClick={() => navigateHandler()}
+            onClick={navigateHandler}
             className="pokemon_card_view_container"
           >
             <div className="pokemon_card_view">

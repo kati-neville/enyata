@@ -5,7 +5,7 @@ import { Paginator, limits } from "@/components/paginator";
 import { SideBar } from "@/components/sidebar";
 import { useSearchParams } from "react-router-dom";
 import { LIMIT, PAGE, SEARCH } from "@/utils/constants";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { handleGetPersistedPokemons } from "@/utils";
 import { PokemonValues } from "@/utils/types";
 import { useFilterData } from "@/utils/hooks/use-filter-data";

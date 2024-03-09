@@ -1,7 +1,7 @@
 import "./paginator.css";
 import caret from "@assets/svgs/caret-right.svg";
 import caretDown from "@assets/svgs/caret-down.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigateParams } from "@/utils/hooks/use-navigate";
 import { useSearchParams } from "react-router-dom";
 import { LIMIT, PAGE, SEARCH } from "@/utils/constants";
@@ -41,6 +41,12 @@ export const Paginator: React.FC<PaginatorProps> = () => {
   const handleSetPageUrlParam = (page: number) => {
     navigate(location.pathname, { ...allParams, [PAGE]: page.toString() });
   };
+
+  useEffect(() => {
+    if (page !== 1) {
+      navigate(location.pathname, { ...allParams, [PAGE]: "1" });
+    }
+  }, [searchItem]);
 
   return (
     <div className="paginator_container">

@@ -53,7 +53,8 @@
   left: 0;
   right: 0;
   background-color: white;
-  visibility: hidden;
+  opacity: 0;
+  bottom: 0;
   padding: 20px 10px 10px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -70,7 +71,8 @@
   border-radius: 14px;
 }
 .pokemon_card_container:hover .pokemon_card_view_container {
-  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease;
   bottom: -4rem;
 }
 .pokemon_card_view:hover {
@@ -128,7 +130,7 @@
   }
 
   .pokemon_card_view_container {
-    visibility: visible;
+    opacity: 1;
     bottom: -4rem;
   }
 
