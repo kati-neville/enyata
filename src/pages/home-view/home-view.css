@@ -1,7 +1,7 @@
 @import url("../../theme.css");
 
 .home_view_container {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   background-color: var(--neutral-150);
   display: flex;
