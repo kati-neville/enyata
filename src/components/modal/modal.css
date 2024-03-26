@@ -21,7 +21,7 @@
   position: relative;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100dvh;
   animation: slideInRight 0.25s ease-out;
 }
 .modal_overlay {

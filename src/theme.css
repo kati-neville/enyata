@@ -179,7 +179,7 @@ main {
 }
 
 .spinner_container {
-  height: 100vh;
+  height: 100dvh;
   justify-content: center;
   align-items: center;
   position: relative;

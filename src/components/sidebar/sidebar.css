@@ -1,7 +1,7 @@
 @import url("../../theme.css");
 
 .sidebar_container {
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--neutral-400);
   width: 40%;
   position: absolute;
